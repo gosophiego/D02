@@ -29,11 +29,21 @@
 # Write your functions below:
 # Body
 
+# 2.
 
+def do_twice(f, some_value):
+	f(some_value)
+	f(some_value)
 
+def print_twice(str):
+	print (str)
+	print (str)
 
+do_twice(print_twice, 'spam')
 
-
+def do_four(f, another_value):
+	do_twice(f, another_value)
+	do_twice(f, another_value)
 
 # Write your functions above:
 ################################################################################

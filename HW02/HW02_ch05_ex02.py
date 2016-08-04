@@ -21,10 +21,21 @@
 # Write your functions below:
 # Body
 
+def check_fermet (a, b, c, n):
+	if (a**n + b**n == c**n):
+		print ('Holy smokes, Fermat was wrong!')
+	else:
+		print ('No, that doesn\'t work.')
 
+def check_fermet_ints ():
+	a = int(input('enter a value for a: '))
+	b = int(input('enter a value for b: '))
+	c = int(input('enter a value for c: '))
+	n = int(input('enter a value for n: '))
+	check_fermet (a, b, c, n)
 
-
-
+check_fermet_ints ()
+check_fermet (1, 2, 3, 4)
 
 
 
@@ -34,7 +45,7 @@
 def main():
     """Call your function within this function.
     When complete have one function call in this function:
-    check_fermat_ints(1,2,3,4)
+    check_fermat_ints()
     and two functions defined in the body:
     check_fermat_ints()
     check_fermat()

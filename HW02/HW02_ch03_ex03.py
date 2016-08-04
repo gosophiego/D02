@@ -40,11 +40,65 @@
 # Write your functions below:
 # Body
 
+#1
+
+def do_twice(f):
+	f()
+	f()
+
+def do_four(f):
+	do_twice(f)
+	do_twice(f)
+
+def row():
+	print('+ - - - -', end= ' ')
+
+def column():
+	print('|', ' ' * 7, end= ' ')
+
+def draw_row():
+	do_twice(row)
+	print('+')
+
+def draw_column():
+	do_twice (column)
+	print ('|')
+
+def draw_two_by_two():
+	draw_row()
+	do_four(draw_column)
+	draw_row()
+	do_four(draw_column)
+	draw_row()
+
+draw_two_by_two()
+
+#2
+
+def draw_row_for_4by4():
+	do_four(row)
+	print('+')
+
+def draw_column_for_4by4():
+	do_four(column)
+	print('|')
+
+def draw_1by4():
+	draw_row_for_4by4()
+	do_four(draw_column_for_4by4)
 
 
+def draw_4by4():
+	do_four(draw_1by4)
+	do_four(row)
+	print('+')
+
+print ("""         
 
 
+""")
 
+draw_4by4()
 
 
 
